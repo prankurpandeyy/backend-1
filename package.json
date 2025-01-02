@@ -2,11 +2,12 @@
   "name": "backend-1",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "dist/api/index.js",
   "scripts": {
     "start": "node dist/api/index.js",
     "dev": "ts-node-dev --respawn --transpile-only src/api/index.ts",
-    "build": "tsc"
+    "build": "tsc",
+    "vercel-build": "tsc"
   },
   "keywords": [],
   "author": "",
@@ -33,5 +34,8 @@
     "@types/morgan": "^1.9.9",
     "@types/swagger-ui-express": "^4.1.6",
     "@types/swagger-jsdoc": "^6.0.4"
+  },
+  "engines": {
+    "node": ">=18.0.0"
   }
 }

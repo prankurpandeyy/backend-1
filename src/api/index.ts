@@ -8,7 +8,6 @@ import { specs } from "../config/swagger";
 dotenv.config();
 
 const app = express();
-const port = process.env.PORT || 3000;
 
 // Middleware
 app.use(express.json());
@@ -40,6 +39,5 @@ app.use(
 
 app.get("/", (req, res) => res.send("Express on Vercel"));
 
-app.listen(port, () => {
-  console.log(`Server is running on port ${port}`);
-});
+// Remove the app.listen() call for Vercel
+export default app;
